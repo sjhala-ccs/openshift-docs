@@ -1,0 +1,35 @@
+// Module included in the following assemblies:
+//
+// * virt/vm_networking/virt-connecting-vm-to-primary-udn.adoc              
+
+:_mod-docs-content-type: PROCEDURE                                    
+[id="virt-creating-primary-udn-web_{context}"]                                   
+= Creating a primary namespace-scoped user-defined network by using the web console
+
+You can create an isolated primary network in your project namespace by using the {product-title} web console.
+
+.Prerequisites
+* Log in to the {product-title} web console as a user with `cluster-admin` permissions.
+
+.Procedure
+. From the *Administrator* perspective, click *Administration* -> *Namespaces*.
+
+. Click *Create Namespace*.
+
+. In the *Name* field, specify a name for the namespace. The name must consist of lower case alphanumeric characters or '-', and must start and end with an alphanumeric character.
+
+. In the *Labels* field, add the `k8s.ovn.org/primary-user-defined-network` label.
+
+. Optional: Specify a default network policy.
+
+. Click *Create* to create the namespace.
+
+. In the Contents view, click *Networking* -> *UserDefinedNetworks*.
+
+. Click *Create UserDefinedNetwork*.
+
+. From the *Project name* list, select the namespace that you created in step 6.
+
+. Specify a value in the *Subnet* field.
+
+. Click *Create*. The user-defined network serves as the default primary network for pods and virtual machines that you create in this namespace.

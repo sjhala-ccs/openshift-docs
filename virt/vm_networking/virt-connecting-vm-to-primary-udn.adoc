@@ -6,7 +6,7 @@ include::_attributes/common-attributes.adoc[]
                                                                 
 toc::[]                
 
-You can connect a virtual machine (VM) to a user-defined network (UDN) on the VM's primary interface. The primary user-defined network replaces the default pod network in your specified namespace. Unlike the pod network, you can define the primary UDN per project, where each project can use its specific subnet and topology.
+You can connect a virtual machine (VM) to a user-defined network (UDN) on the VM's primary interface by using the {product-title} web console or the CLI. The primary user-defined network replaces the default pod network in your specified namespace. Unlike the pod network, you can define the primary UDN per project, where each project can use its specific subnet and topology.
 
 {VirtProductName} supports the namespace-scoped `UserDefinedNetwork` and the cluster-scoped `ClusterUserDefinedNetwork` custom resource definitions (CRD). 
 
@@ -32,6 +32,8 @@ You must consider the following limitations before implementing a primary UDN:
 ====
 {VirtProductName} currently does not support secondary user-defined networks.
 ====
+
+include::modules/virt-creating-primary-udn-web.adoc[leveloffset=+1]
 
 include::modules/virt-creating-a-primary-udn.adoc[leveloffset=+1]
 
